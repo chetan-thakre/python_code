@@ -30,7 +30,7 @@ def add_user():
      username = 'chetan'
   
      # Asking for users password 
-     password = 'Ansible@123$'    
+     password = input("enter your password: ")
 
      try: 
          # executing useradd command using subprocess module 
