@@ -30,7 +30,7 @@ def add_user():
      username = 'chetan'
   
      # Asking for users password 
-     password = redhat#input("enter your password: ")
+     password = 'redhat'#input("enter your password: ")
 
      try: 
          # executing useradd command using subprocess module 
