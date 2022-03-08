@@ -13,13 +13,13 @@ from os import getcwd
 
 #Authentication using PATs (Personal Access Token)
 confluence = Confluence(
-    url='https://confluence.nexgen.neustar.biz/',
+    url='https://',
     token='')
 
 
 
 #updating the DOC page 
-page_id=479440497
+page_id='pageid'
 
 query_output = confluence.get_page_by_id(page_id, expand='body.storage', status=None, version=None) #expand='storage', 
 #converting json object to python dictionary
@@ -47,7 +47,7 @@ with open(template_file, 'r') as TF:
 #update the confluence page 
 status = confluence.update_page(
     parent_id=None,
-    page_id=479440497,
+    page_id='pageid',
     title="TEST COPY - DOC PAGE",
     body=html_template,
 )
@@ -58,7 +58,6 @@ print(status)
 '''
 title='TEST COPY - DOC PAGE'
 space=''
-page_id = '479440497'
 #print( confluence.get_page_by_title( space, title) )
 print( confluence.get_page_by_id(self, page_id, expand=None, status=None, version=None))
 '''
